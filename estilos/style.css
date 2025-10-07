@@ -1,0 +1,35 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import url(login.css); /*tela login*/
+
+:root {
+    --lilas:#8f5bbe;
+    --indigo-claro:#bcb1f7;
+    --branco:#f6f5ff;
+
+    --fonte-principal:"Playfair Display", serif;
+    --fonte-secundaria: "Lato", sans-serif;
+
+}
+
+body {
+    background-color: var(--indigo-claro);
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
