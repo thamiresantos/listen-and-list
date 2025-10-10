@@ -1,5 +1,22 @@
 /*TELA LOGIN*/
 
+section {
+    width: 100vw;
+    height: 94vh;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 180px;
+    height: 180px;
+    
+}
+
 .container-frases {
     display: flex;
     flex-direction: column;
@@ -10,6 +27,7 @@
     height: 36px;
     width: 100%;
     overflow: hidden;
+    margin: 14px;
 }
 
 .frases {
@@ -37,6 +55,45 @@
     10%, 50% { opacity: 1; transform: translateY(0); }
     50%, 60% { opacity: 0; transform: translateY(-100%); }
     60%, 100% { opacity: 0; transform: translateY(-100%); }
+}
+
+.pergunta {
+    font-family: var(--fonte-principal);
+    margin-top: 28px;
+}
+
+#btn-nomeUsuario {
+    margin: 8px;
+    padding: 9px 15px 8px 15px;
+    border-radius: 9px;
+    border: 3px solid var(--lilas);
+    background-color: var(--branco);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+   
+}
+
+#btn-nomeUsuario:hover {
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+#btn-nomeUsuario:focus {
+    outline: none;
+    border: 3px solid var(--lilas);
+    background-color: var(--branco);
+}
+
+.btn-tela-login {
+    padding: 12px 30px;
+    margin: 8px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-tela-login:hover {
+    box-shadow: none;
+    transform: scale(1.05);
+
 }
 
 
