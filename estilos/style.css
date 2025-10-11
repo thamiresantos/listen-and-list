@@ -56,3 +56,18 @@ footer a:hover {
     color: var(--lilas);
 }
 
+/* -------- Tablet ------- */
+@media (min-width: 768px) {
+
+}
+
+/*-------- Desktop -------- */
+@media (min-width: 1024px) {
+
+    footer {
+        font-size: 18px;
+    }
+    footer a {
+        font-size: 18px;
+    }
+}

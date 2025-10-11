@@ -101,6 +101,75 @@ section {
 
 }
 
+/* --------- Tablet --------- */
+@media (min-width: 768px) {
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        background-image:url("imagens/img-esquerda.png");
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    #btn-nomeUsuario {
+        font-size: 18px;
+    }
+
+    .btn-tela-login{
+        width: 280px;
+    }
+}
+
+/*--------- Desktop --------- */
+@media (min-width: 1024px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        background-image: 
+            url("imagens/img-esquerda.png"),
+            url("imagens/img-direita.png");
+        background-position: left center, right center;
+        background-repeat: no-repeat, no-repeat;
+        background-size: contain, contain; 
+    }
+
+
+    .logo {
+        width: 220px;
+        height: 220px;
+        margin-top: 20px;
+    }
+
+    .container-frases {
+        margin-bottom: 5px;
+    }
+
+    .frases{
+        font-size: 21px;
+    }
+
+    .pergunta {
+        font-size: 18px;
+    }
+
+    #btn-nomeUsuario {
+        margin: 10px;
+        padding: 10px 32px 12px 32px;
+    }
+
+    .btn-tela-login {
+       width: 350px;
+       padding: 15px;
+        margin: 10px;
+        font-size: 15px;
+    }
+}
+
 
 
 
