@@ -82,6 +82,11 @@ section {
     background-color: var(--branco);
 }
 
+.btn-tela-login:disabled {  /* inativo/bloqueado */
+  background-color: #c9c9c9; 
+  cursor: not-allowed; 
+}
+
 .btn-tela-login {
     padding: 12px 30px;
     margin: 8px;
