@@ -31,4 +31,17 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:29, artista:"Ariana Grande", titulo:"POV", album:"Positions", tempo:"3:21"},
         {id:30, artista:"ATEEZ", titulo:"BOUNCY", album:"The World EP.2:Outlaw", tempo:"3:07"}
     ]
+
+ //função para embaralhar usando a lógica do algoritimo fisher-yates
+    function embaralhar (musica){
+        for (let i = musica.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [musica[i], musica[j]] = [musica[j], musica[i]];
+        }
+    }
+
+
+    embaralhar(musicas);
+
+
 })
