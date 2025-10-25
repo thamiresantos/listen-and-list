@@ -40,8 +40,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    embaralhar(musicas); //chamando função
 
-    embaralhar(musicas);
+    const tituloMusica = document.getElementById('musica-titulo');
+    const artista = document.getElementById('musica-artista');
+    const infoMusica =document.getElementById("musica-info");
 
+    let musicaAtual = 0 ; //posição da música que esta na tela
+    let listaSelecionadas = []; //array com as musicas que o usuario adicionou
+
+    //função mostrar música na tela
+    function mostrarMusica () {
+    
+        if (musicaAtual >= musicas.length) {
+            localStorage.setItem('playlistFinal', JSON.stringify(listaSelecionadas)); //salvando a lista
+            window.location.href = "playlist.html"; //sendo redirecionado para a próxima página
+
+        } else {
+            tituloMusica.textContent = musicas[musicaAtual].titulo
+            artista.textContent = musicas[musicaAtual].artista
+            infoMusica.textContent = musicas[musicaAtual].album + " • " + musicas[musicaAtual].tempo
+        }
+    }
+    
+    mostrarMusica() //chamando função
 
 })
