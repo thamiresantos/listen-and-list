@@ -1,0 +1,154 @@
+
+.btn-voltar {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* espaço entre ícone e texto */
+  background: var(--lilas);
+  border: 1px solid var(--branco);
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: var(--fonte-secundaria);
+  margin: 10px;
+  width: 80px;
+  text-decoration: none;
+  color: var(--branco);
+  padding: 4px;
+}
+
+.btn-voltar:hover {
+  background-color: var(--branco);
+  color: var(--lilas);
+  border: 1px solid var(--lilas);
+}
+
+
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.titulo{
+  font-family: var(--fonte-principal);
+  font-size: 1em;
+  font-weight: bolder;
+  color: var(--lilas); 
+
+}
+
+.container-musicas {
+  background-color: var(--branco);
+  height: 350px;
+  width: 280px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--lilas);
+}
+
+.card-musica{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  font-family: var(--fonte-secundaria);
+  height: 80%;
+}
+
+.icon-musica {
+  border: 2px solid gray;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  box-shadow: 0 12px 8px rgba(0, 0, 0, 0.1);
+}
+
+#musica-titulo {
+  font-size: 1em;
+  padding: 8px;
+}
+
+#musica-artista, #musica-info{
+  font-size: 1em;
+  padding: 5px;
+}
+
+#card-botoes {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+
+#btn-pular{
+  font-size: 14px;
+  border-radius: 20px;
+  border: 2px solid var(--lilas);
+  padding: 10px;
+  cursor: pointer;
+}
+
+#btn-pular:hover{
+  background-color: var(--indigo-claro);
+   transform: scale(1.05);
+  
+}
+
+#btn-adicionar{
+  font-size: 14px;
+  padding: 10px;
+ 
+}
+
+#btn-adicionar:hover {
+  background-color: var(--indigo-claro);
+  color: black;
+  border: 2px solid var(--lilas);
+   transform: scale(1.0);
+}
+
+#finalizar {
+font-size: 15px;
+width: 200px;
+margin: 25px;
+padding: 12px;
+border-radius: 15px;
+border: 1px solid var(--indigo-claro);
+transition: all 0.3s ease;
+background: linear-gradient(90deg, #cac1fb,#bcb1f7,#bb80ee ,#905dbd);
+background-size: 300% 300%;
+animation: moveGrad 7s linear infinite;
+color: var(--branco);
+visibility: hidden;
+}
+
+@keyframes moveGrad {
+    0%   { background-position:   0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position:   0% 50%; }
+
+}
+
+#finalizar:hover {
+  transform: scale(1.05);
+}
+
+#container-playlist {
+  height: 100%;
+  visibility: hidden;
+}
+
+.texto-Playlist {
+  padding: 10px;
+  font-size: 14px;
+  font-family: var(--fonte-principal);
+}
+
+.texto-Playlist:hover {
+  background-color: var(--lilas);
+  color: var(--branco);
+  cursor: pointer;
+}
+
+
