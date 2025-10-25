@@ -65,4 +65,17 @@ document.addEventListener('DOMContentLoaded', () => {
     
     mostrarMusica() //chamando função
 
+    const btnPular = document.getElementById ('btn-pular');
+    const btnAdicionar = document.getElementById('btn-adicionar');
+    const btnFinalizar = document.getElementById('finalizar');
+    const containerPlaylist = document.getElementById ('container-playlist');
+
+    //botão de PULAR
+    btnPular.addEventListener ('click', () => {
+        musicaAtual++, //vai para a próxima música
+        mostrarMusica() //mostra ela na tela
+    })
+    
+   
+
 })
