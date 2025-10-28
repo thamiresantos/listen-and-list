@@ -4,53 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listen and List</title>
-    <link rel="stylesheet" href="estilos/style.css">
-<link rel="stylesheet"
+    <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="estilos/style.css">
+
 </head>
 <body>
     <!--Botão voltar tela inicial-->
-    <a href="login.html"  class="btn-voltar">  <span class="material-symbols-outlined">arrow_back</span>Voltar</a>
+    <a href="login.html"  class="btn-voltar" aria-label="Voltar para tela inicial">  <span class="material-symbols-outlined">arrow_back</span>Voltar</a>
    
     <!--Sessão Principal-->
-    <section class="hero">
-        <div class="container-informações">
+    <main class="conteudo-principal">
+        <div class="container-informacoes">
             <h1 class="titulo">Descubra Sua Playlist Perfeita</h1>
             <p class="quantidade-musicas-selecionadas"></p>
-            <div id="container-area-progresso">
+            <div id="area-progresso">
                 <div id="fill-area-progresso"></div>
             </div>
         </div>
-        <!--músicas-->
-        <div class="container-musicas">
-            <div class="card-musica">
+        <!-- cards com as músicas-->
+        <section class="container-musicas" id="container-musicas">
+            <div class="card-musica" id="card-musica">
                 <span class="material-symbols-outlined icon-musica">music_note</span>
                 <h2 id="musica-titulo"></h2>
                 <p id="musica-artista"></p>
                 <p id="musica-info"></p>
                 <div id="card-botoes">
                     <button id="btn-pular">
-                        <span class="material-symbols-outlined">play_arrow </span> 
+                        <span class="material-symbols-outlined icon">skip_next</span> 
                         Pular
                     </button>
 
                     <button id="btn-adicionar" class="botoes">
-                        <span class="material-symbols-outlined">add</span> 
+                        <span class="material-symbols-outlined icon">add</span> 
                         Adicionar à Lista
                     </button>
                 </div>
             
-                <button id="finalizar">Finalizar Playlist?</button>
+                <button id="btn-finalizar">Finalizar Playlist?</button>
             </div>
-        </div>
+        </section>
+    </main>
 
-        <div id="container-playlist" class="container-musicas "></div> <!--Playlist do usuario-->
-    
-    </section>
-
-        <footer>
-      <p class="informacao-rodape">© 2025 - Desenvolvido por  <a href="https://github.com/thamiresantos" target="_blank"  rel="noopener noreferrer"> Thamires Santos</a></p>
+    <footer>
+        <p class="informacao-rodape">© 2025 - Desenvolvido por  <a href="https://github.com/thamiresantos" target="_blank"  rel="noopener noreferrer"> Thamires Santos</a></p>
    </footer>
+
     <script src="javascript/js-principal.js"></script>
 </body>
 </html>
