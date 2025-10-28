@@ -42,12 +42,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     embaralhar(musicas); //chamando função
 
+    //VARIAVEIS
     const tituloMusica = document.getElementById('musica-titulo');
     const artista = document.getElementById('musica-artista');
     const infoMusica =document.getElementById("musica-info");
 
     let musicaAtual = 0 ; //posição da música que esta na tela
     let listaSelecionadas = []; //array com as musicas que o usuario adicionou
+
+    //função animação do card
+    function animarCard (callback) {
+        const card = document.getElementById('container-musicas')
+        card.classList.add('animar');
+
+        //Espera a animação terminar para trocar o conteúdo
+        setTimeout(() => {
+            card.classList.remove('animar');
+            callback(); // executa a função qur troca a música
+        }, 700); // tempo igual ao da animação
+        }
 
     //função mostrar música na tela
     function mostrarMusica () {
@@ -63,19 +76,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    mostrarMusica() //chamando função
+    mostrarMusica() // Exibe a música atual na tela
 
+    //VARIAVEIS
     const btnPular = document.getElementById ('btn-pular');
     const btnAdicionar = document.getElementById('btn-adicionar');
-    const btnFinalizar = document.getElementById('finalizar');
-    const containerPlaylist = document.getElementById ('container-playlist');
 
     //botão de PULAR
     btnPular.addEventListener ('click', () => {
         musicaAtual++, //vai para a próxima música
-        mostrarMusica() //mostra ela na tela
+        animarCard(mostrarMusica) //mostra ela na tela
     })
-    
+
    
 
 })
