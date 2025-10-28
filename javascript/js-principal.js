@@ -113,6 +113,13 @@ document.addEventListener('DOMContentLoaded', () => {
         animarCard(mostrarMusica) //mostra ela na tela
     })
 
+    // botão FINALIZAR PLAYLIST
+    btnFinalizar.addEventListener ('click', () => {
+        localStorage.setItem('playlistFinal', JSON.stringify(listaSelecionadas)); //salvando a música na playlist
+        window.location.href = "playlist.html"; //sendo redirecionado para a próxima página
+
+    })
+
    
 
 })
