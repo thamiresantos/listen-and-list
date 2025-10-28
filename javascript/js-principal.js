@@ -81,9 +81,34 @@ document.addEventListener('DOMContentLoaded', () => {
     //VARIAVEIS
     const btnPular = document.getElementById ('btn-pular');
     const btnAdicionar = document.getElementById('btn-adicionar');
+    const btnFinalizar = document.getElementById('btn-finalizar');
+    const sectionPlaylist = document.getElementById ('section-playlist');
+    const containerMusica = document.getElementById('container-musicas');
+    const novaAlturaContainer = 350;
+    const textoContainer = document.getElementById('playlist-texto-inicial')
+
 
     //botão de PULAR
     btnPular.addEventListener ('click', () => {
+        musicaAtual++, //vai para a próxima música
+        animarCard(mostrarMusica) //mostra ela na tela
+    })
+
+    // botão ADICIONAR MÚSICA
+    btnAdicionar.addEventListener ('click', () => {
+        const musica = musicas[musicaAtual];
+        listaSelecionadas.push(musica); // guardar a musica na lista
+
+
+        containerMusica.style.height = novaAlturaContainer + 'px'; //alterando a altura do container para o botão apararecer
+        textoContainer.style.display = 'none'
+        const itemLista = document.createElement('p'); //criando elemento p
+        itemLista.textContent = `${musica.titulo} - ${musica.artista}`; 
+        itemLista.classList.add('texto-playlist')
+        sectionPlaylist.appendChild(itemLista); // adicionando o p dentro da div
+
+        btnFinalizar.style.visibility = 'visible';      
+
         musicaAtual++, //vai para a próxima música
         animarCard(mostrarMusica) //mostra ela na tela
     })
