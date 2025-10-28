@@ -1,4 +1,4 @@
-
+/* BOTÃO DE VOLTAR*/
 .btn-voltar {
   display: flex;
   align-items: center;
@@ -21,11 +21,19 @@
   border: 1px solid var(--lilas);
 }
 
+/* ICON MÚSICA DO CARD*/
+.icon {
+  font-size: 22px;
+  gap: 10px;
+  padding-right: 5px;
+}
 
-.hero {
+/* MAIN */
+.conteudo-principal {
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: 85vh;
 
 }
 
@@ -37,13 +45,33 @@
 
 }
 
+/* CARDS DAS MÚSICAS*/
 .container-musicas {
   background-color: var(--branco);
-  height: 350px;
+  height: 270px;
   width: 280px;
   margin: 20px;
   border-radius: 10px;
   border: 2px solid var(--lilas);
+}
+
+.animar {
+  animation: girarFade 0.7s ease;
+}
+
+@keyframes girarFade {
+  0% {
+    opacity: 1; /*começa visível*/
+    transform: rotateY(0deg) scale(1);
+  }
+  50% {
+    opacity: 0; /* fica invisível no meio*/
+    transform: rotateY(90deg) scale(0.95); /**/
+  }
+  100% {
+    opacity: 1; /*reaparece*/
+    transform: rotateY(0deg) scale(1);
+  }
 }
 
 .card-musica{
@@ -53,7 +81,7 @@
   padding: 10px;
   font-family: var(--fonte-secundaria);
   height: 80%;
-}
+} 
 
 .icon-musica {
   border: 2px solid gray;
@@ -80,25 +108,28 @@
   margin-top: 20px;
 }
 
-
 #btn-pular{
+  display: flex;
+  align-items: center;
   font-size: 14px;
   border-radius: 20px;
   border: 2px solid var(--lilas);
-  padding: 10px;
+  padding: 10px 15px;
   cursor: pointer;
 }
 
 #btn-pular:hover{
   background-color: var(--indigo-claro);
-   transform: scale(1.05);
-  
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
-#btn-adicionar{
+#btn-adicionar {
+  display: flex;
+  align-items: center;
   font-size: 14px;
   padding: 10px;
- 
+  border: 2px solid var(--lilas);
 }
 
 #btn-adicionar:hover {
@@ -106,21 +137,22 @@
   color: black;
   border: 2px solid var(--lilas);
    transform: scale(1.0);
+   transition: all 0.3s ease;
 }
 
-#finalizar {
-font-size: 15px;
-width: 200px;
-margin: 25px;
-padding: 12px;
-border-radius: 15px;
-border: 1px solid var(--indigo-claro);
-transition: all 0.3s ease;
-background: linear-gradient(90deg, #cac1fb,#bcb1f7,#bb80ee ,#905dbd);
-background-size: 300% 300%;
-animation: moveGrad 7s linear infinite;
-color: var(--branco);
-visibility: hidden;
+#btn-finalizar {
+  font-size: 15px;
+  width: 200px;
+  margin: 25px;
+  padding: 12px;
+  border-radius: 15px;
+  border: 1px solid var(--indigo-claro);
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #cac1fb,#bcb1f7,#bb80ee ,#905dbd);
+  background-size: 300% 300%;
+  animation: moveGrad 7s linear infinite;
+  color: var(--branco);
+  visibility: hidden;
 }
 
 @keyframes moveGrad {
@@ -130,19 +162,20 @@ visibility: hidden;
 
 }
 
-#finalizar:hover {
+#btn-finalizar:hover {
   transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
-#container-playlist {
-  height: 100%;
-  visibility: hidden;
-}
-
-.texto-Playlist {
-  padding: 10px;
+/* PLAYLIST USUARIO ADD NO JS*/
+.texto-playlist {
+  padding: 8px;
   font-size: 14px;
   font-family: var(--fonte-principal);
+  background-color: var(--lilas);
+  color: var(--branco);
+  margin: 6px;
+  border-radius: 4px;
 }
 
 .texto-Playlist:hover {
@@ -151,4 +184,34 @@ visibility: hidden;
   cursor: pointer;
 }
 
+/* PLAYLIST USUARIO*/
+#container-playlist {
+  display: flex;
+  justify-content: space-between;
+  padding:10px;
+  font-family: var(--fonte-secundaria);
+  font-size: 14px;
+}
+
+.playlist-header {
+  display: flex;
+  gap: 10px;
+}
+
+#playlist-texto-inicial {
+  display: flex;
+  flex-direction: column;
+    font-size: 14px;
+  text-align: center;
+}
+
+.iconFavorite{
+  font-size: 18px;
+}
+
+.iconStar {
+  font-size: 35px;
+  text-align: center;
+  padding: 25px 20px 10px;
+}
 
