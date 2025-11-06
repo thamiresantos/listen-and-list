@@ -60,8 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.remove('animar');
             callback(); // executa a função qur troca a música
         }, 700); // tempo igual ao da animação
-        }
+    }
 
+    
     //função mostrar música na tela
     function mostrarMusica () {
     
@@ -85,13 +86,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const sectionPlaylist = document.getElementById ('section-playlist');
     const containerMusica = document.getElementById('container-musicas');
     const novaAlturaContainer = 350;
-    const textoContainer = document.getElementById('playlist-texto-inicial')
+    const textoContainer = document.getElementById('playlist-texto-inicial');
+    const contadorPlaylist = document.getElementById("quantidadeMusicaPlaylist");
+    let totalMusicas = 0;
+    const totalMusicasPossiveis = musicas.length; //total de opção de músicas
+    const barraProgresso = document.getElementById("fill-area-progresso");
+    const textoQuantidade = document.getElementById("quantidade-musicas-selecionadas");
 
+    
+    //função para atualizar a barra
+    function atualizarProgresso() {
+        const progresso = ((musicaAtual + 1) / totalMusicasPossiveis) * 100;
+        barraProgresso.style.width = progresso + "%";
+        textoQuantidade.textContent = `Música ${musicaAtual + 1} de ${totalMusicasPossiveis}`;
+    }
 
     //botão de PULAR
     btnPular.addEventListener ('click', () => {
         musicaAtual++, //vai para a próxima música
         animarCard(mostrarMusica) //mostra ela na tela
+
+        atualizarProgresso();
+
     })
 
     // botão ADICIONAR MÚSICA
@@ -109,8 +125,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         btnFinalizar.style.visibility = 'visible';      
 
+        totalMusicas++; 
+        contadorPlaylist.textContent = totalMusicas; //quantidade de músicas na playlist
+
         musicaAtual++, //vai para a próxima música
         animarCard(mostrarMusica) //mostra ela na tela
+
+        atualizarProgresso();
+
     })
 
     // botão FINALIZAR PLAYLIST
