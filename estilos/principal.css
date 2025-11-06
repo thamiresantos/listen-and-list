@@ -1,3 +1,10 @@
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
 /* BOTÃO DE VOLTAR*/
 .btn-voltar {
   display: flex;
@@ -34,7 +41,14 @@
   align-items: center;
   flex-direction: column;
   height: 85vh;
+  flex: 1;
 
+}
+
+.container-informacoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .titulo{
@@ -45,12 +59,34 @@
 
 }
 
+#quantidade-musicas-selecionadas{
+  padding: 2px;
+  color: var(--branco);
+}
+
+#area-progresso {
+  width: 90%;
+  height: 8px;
+  background-color: var(--branco);
+  border: 1px solid var(--lilas);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px auto;
+}
+
+#fill-area-progresso {
+  height: 100%;
+  width: 0%;
+  background-color: var(--lilas);
+  border-radius: 10px;
+  transition: width 0.4s ease; 
+}
 /* CARDS DAS MÚSICAS*/
 .container-musicas {
   background-color: var(--branco);
   height: 270px;
   width: 280px;
-  margin: 20px;
+  margin: 10px;
   border-radius: 10px;
   border: 2px solid var(--lilas);
 }
@@ -185,6 +221,14 @@
 }
 
 /* PLAYLIST USUARIO*/
+#section-playlist {
+  max-height: 300px; /* altura máxima da área da playlist */
+  overflow-y: auto; /* ativa rolagem automaticamente */
+  scrollbar-gutter: stable;
+  scrollbar-color: var(--lilas) var(--branco);
+}
+
+
 #container-playlist {
   display: flex;
   justify-content: space-between;
