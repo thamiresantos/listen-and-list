@@ -59,6 +59,13 @@ footer a:hover {
 
 /* -------- Tablet ------- */
 @media (min-width: 768px) {
+    footer  {
+        font-size: 17px
+    }
+
+    footer a {
+        font-size: 17px;
+    }
 
 }
 
