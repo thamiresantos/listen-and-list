@@ -121,6 +121,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const itemLista = document.createElement('p'); //criando elemento p
         itemLista.textContent = `${musica.titulo} - ${musica.artista}`; 
         itemLista.classList.add('texto-playlist')
+
+        //icon para remover musica
+        const btnRemover = document.createElement('span');
+        btnRemover.classList.add ('material-symbols-outlined', 'btn-remover');
+        btnRemover.textContent = 'close_small';
+      
+        btnRemover.addEventListener('click', () => {   // remover música
+            sectionPlaylist.removeChild(itemLista);
+            listaSelecionadas = listaSelecionadas.filter( m => m.id !== musica.id); // mantém só as músicas com id diferente da clicada
+            totalMusicas--;
+            contadorPlaylist.textContent = totalMusicas;
+        });
+
+        itemLista.appendChild(btnRemover); //adiciona o icone dentro do p
+
         sectionPlaylist.appendChild(itemLista); // adicionando o p dentro da div
 
         btnFinalizar.style.visibility = 'visible';      
