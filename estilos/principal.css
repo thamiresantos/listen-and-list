@@ -205,6 +205,9 @@ body{
 
 /* PLAYLIST USUARIO ADD NO JS*/
 .texto-playlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
   font-family: var(--fonte-principal);
@@ -218,6 +221,18 @@ body{
   background-color: var(--lilas);
   color: var(--branco);
   cursor: pointer;
+}
+
+.btn-remover {
+  color: var(--branco);
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-remover:hover {
+  color: black;
+  transform: scale(1.1);
 }
 
 /* PLAYLIST USUARIO*/
