@@ -11,40 +11,42 @@
 </head>
 <body>
     <!--Botão voltar tela inicial-->
-    <a href="login.html"  class="btn-voltar" aria-label="Voltar para tela inicial">  <span class="material-symbols-outlined">arrow_back</span>Voltar</a>
+    <a href="index.html"  class="btn-voltar" aria-label="Voltar para tela inicial">  <span class="material-symbols-outlined">arrow_back</span>Voltar</a>
    
     <!--Sessão Principal-->
-    <main class="conteudo-principal">
-        <div class="container-informacoes">
-            <h1 class="titulo">Descubra Sua Playlist Perfeita</h1>
-            <p id="quantidade-musicas-selecionadas"> Música 1 de 30 </p>
-            <div id="area-progresso">
-                <div id="fill-area-progresso"></div>
-            </div>
-        </div>
-        <!-- cards com as músicas-->
-        <section class="container-musicas" id="container-musicas">
-            <div class="card-musica" id="card-musica">
-                <span class="material-symbols-outlined icon-musica">music_note</span>
-                <h2 id="musica-titulo"></h2>
-                <p id="musica-artista"></p>
-                <p id="musica-info"></p>
-                <div id="card-botoes">
-                    <button id="btn-pular">
-                        <span class="material-symbols-outlined icon">skip_next</span> 
-                        Pular
-                    </button>
-
-                    <button id="btn-adicionar" class="botoes">
-                        <span class="material-symbols-outlined icon">add</span> 
-                        Adicionar à Lista
-                    </button>
+    <main class="main-container">
+        <div class="agrupamento-geral">
+            <div class="container-informacoes">
+                <h1 class="titulo">Descubra Sua Playlist Perfeita</h1>
+                <p id="quantidade-musicas-selecionadas"> Música 1 de 30 </p>
+                <div id="area-progresso">
+                    <div id="fill-area-progresso"></div>
                 </div>
-            
-                <button id="btn-finalizar">Finalizar Playlist?</button>
             </div>
-        </section>
+            <!-- cards com as músicas-->
 
+            <section class="container-musicas" id="container-musicas">
+                <div class="card-musica" id="card-musica">
+                    <span class="material-symbols-outlined icon-musica">music_note</span>
+                    <h2 id="musica-titulo"></h2>
+                    <p id="musica-artista"></p>
+                    <p id="musica-info"></p>
+                    <div id="card-botoes">
+                        <button id="btn-pular">
+                            <span class="material-symbols-outlined icon">skip_next</span> 
+                            Pular
+                        </button>
+
+                        <button id="btn-adicionar" class="botoes">
+                            <span class="material-symbols-outlined icon">add</span> 
+                            Adicionar à Lista
+                        </button>
+                    </div>
+                
+                    <button id="btn-finalizar">Finalizar Playlist?</button>
+                </div>
+            </section>
+        </div>
         <!--Playlist do usuario-->
         <section id="section-playlist" class="container-musicas"> 
            <div id="container-playlist">
@@ -63,7 +65,7 @@
         </section> 
     </main>
 
-    <footer>
+    <footer class="rodape">
         <p class="informacao-rodape">© 2025 - Desenvolvido por  <a href="https://github.com/thamiresantos" target="_blank"  rel="noopener noreferrer"> Thamires Santos</a></p>
    </footer>
 
