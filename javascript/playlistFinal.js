@@ -28,3 +28,16 @@ playlist.forEach(musica => {
     listaFinal.appendChild(item);
 });
 
+//  BOTÃO CRIAR NOVA LISTA
+const btnNovaLista = document.getElementById("btn-nova");
+btnNovaLista.addEventListener("click", () => {
+    window.location.href = "principal.html";
+});
+
+
+//  BOTÃO FINALIZAR
+const btnFinal = document.getElementById("btn-fim");
+btnFinal.addEventListener("click", () => {
+    window.location.href = "index.html";
+});
+
