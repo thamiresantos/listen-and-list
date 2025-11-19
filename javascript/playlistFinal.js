@@ -41,3 +41,23 @@ btnFinal.addEventListener("click", () => {
     window.location.href = "index.html";
 });
 
+// EFEITO DAS NOTAS 
+const container = document.getElementById("conteudo");
+const notas = ["🎵", "🎶", "🎤"];
+
+function criarNota() {
+  const nota = document.createElement("div");
+  nota.classList.add("nota");
+  nota.textContent = notas[Math.floor(Math.random() * notas.length)];
+
+  nota.style.left = Math.random() * 100 + "vw";
+  nota.style.fontSize = Math.random() * 0.8 + 0.8 + "rem";
+  nota.style.color = `hsl(${Math.random() * 360}, 70%, 60%)`;
+  nota.style.opacity = Math.random() * 0.4 + 0.3;
+
+  container.appendChild(nota);
+
+  setTimeout(() => nota.remove(), 7000);
+}
+
+setInterval(criarNota, 600);
