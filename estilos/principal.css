@@ -1,3 +1,7 @@
+#corpo-tela-principal{
+  overflow: hidden;
+}
+
 body{
   display: flex;
   flex-direction: column;
