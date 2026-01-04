@@ -1,9 +1,10 @@
 /*TELA LOGIN*/
-
-section {
-    width: 100vw;
-    height: 92vh;
+#corpo-tela-inicial{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .conteudo-principal {
     display: flex;
@@ -99,6 +100,13 @@ section {
     box-shadow: none;
     transform: scale(1.05);
 
+}
+
+footer {
+    margin-top: auto;
+}
+footer p {
+    margin: 0;
 }
 
 /* --------- Tablet --------- */
